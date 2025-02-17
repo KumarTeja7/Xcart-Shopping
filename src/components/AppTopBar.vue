@@ -1,16 +1,15 @@
 <template>
+
     <div>
         <div class="layout-wrapper">
-
             <!-- Top Menu Bar -->
-            <Menubar class="top-bar" :model="items">
+            <!-- <Menubar class="top-bar" :model="items">
                 <template #start>
                 </template>
-                <template #end>
+<template #end>
                     <button class="p-button p-button-outlined p-button-primary" @click="login">SignUp</button>
                 </template>
-            </Menubar>
-
+</Menubar> -->
         </div>
     </div>
 

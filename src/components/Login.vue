@@ -18,7 +18,6 @@
                 </form>
                 <div style="padding-top: 1rem;margin-left: 5rem;">
                     <Button label="Register" @click.prevent="RegisterUser" />
-
                 </div>
             </div>
             <div v-else>
@@ -38,9 +37,11 @@
                 <div style="padding-top: 1rem;margin-left: 5rem;">
                     <Button label="Login" @click.prevent="handleLogin" />
                 </div>
+                <div class="forgot">
+                    <span @click="ForgotPassword">Forgot Password ?</span>
+                </div>
                 <div class="register">
-                    <span style="text-align: right;">New user</span>
-                    <Button class="registerbtn" label="Register" @click="ChangeForm" />
+                    <span class="registerbtn" @click="ChangeForm">Register</span>
                 </div>
             </div>
 
@@ -86,8 +87,9 @@ const RegisterUser = function () {
 const ChangeForm = function () {
     IsRegister.value = true;
 }
+const ForgotPassword = function () {
 
-
+}
 
 </script>
 
@@ -150,10 +152,21 @@ label {
     padding: 1rem;
     float: right;
     color: black;
-    transform: translate(90%);
+    transform: translate(100%, 75%);
 }
 
 .registerbtn {
-    background: lightseagreen
+    color: black;
+    cursor: pointer;
+}
+
+.forgot {
+    display: flex;
+    color: black;
+    position: absolute;
+    margin-top: 3rem;
+    margin-right: 20rem;
+    transform: translateX(-90%);
+    cursor: pointer;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="layout-wrapper">
-    
+
     <!-- Top Menu Bar -->
     <Menubar class="top-bar" :model="items">
       <template #start>
@@ -24,7 +24,7 @@
 </template>
 
 <script setup>
-import {ref } from 'vue';
+import { ref } from 'vue';
 
 import 'primeicons/primeicons.css';
 import Menubar from 'primevue/menubar';
@@ -39,50 +39,50 @@ const sidebarItems = [
   { label: 'Logout', icon: 'pi pi-sign-out' },
 ];
 const items = ref([
-    {
-        label: 'Home',
-        icon: 'pi pi-home'
-    },
-    {
-        label: 'Features',
-        icon: 'pi pi-star'
-    },
-    {
-        label: 'Projects',
-        icon: 'pi pi-search',
+  {
+    label: 'Home',
+    icon: 'pi pi-home'
+  },
+  {
+    label: 'Features',
+    icon: 'pi pi-star'
+  },
+  {
+    label: 'Projects',
+    icon: 'pi pi-search',
+    items: [
+      {
+        label: 'Components',
+        icon: 'pi pi-bolt'
+      },
+      {
+        label: 'Blocks',
+        icon: 'pi pi-server'
+      },
+      {
+        label: 'UI Kit',
+        icon: 'pi pi-pencil'
+      },
+      {
+        label: 'Templates',
+        icon: 'pi pi-palette',
         items: [
-            {
-                label: 'Components',
-                icon: 'pi pi-bolt'
-            },
-            {
-                label: 'Blocks',
-                icon: 'pi pi-server'
-            },
-            {
-                label: 'UI Kit',
-                icon: 'pi pi-pencil'
-            },
-            {
-                label: 'Templates',
-                icon: 'pi pi-palette',
-                items: [
-                    {
-                        label: 'Apollo',
-                        icon: 'pi pi-palette'
-                    },
-                    {
-                        label: 'Ultima',
-                        icon: 'pi pi-palette'
-                    }
-                ]
-            }
+          {
+            label: 'Apollo',
+            icon: 'pi pi-palette'
+          },
+          {
+            label: 'Ultima',
+            icon: 'pi pi-palette'
+          }
         ]
-    },
-    {
-        label: 'Contact',
-        icon: 'pi pi-envelope'
-    }
+      }
+    ]
+  },
+  {
+    label: 'Contact',
+    icon: 'pi pi-envelope'
+  }
 ]);
 
 const login = () => {
